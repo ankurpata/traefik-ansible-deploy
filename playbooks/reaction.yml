@@ -8,9 +8,9 @@
   remote_user: root
   gather_facts: true
   vars:
-    do_auth_token: "YOUR_DIGITALOCEAN_AUTH_TOKEN"
-    domain: "YOUR_DOMAIN"
-    email: "YOUR_EMAIL"
+    do_auth_token: "3c2c54a4407304f27362d3ee31058b6132e875810e06b00aeb4c08f2cc941c81"
+    domain: "taleoftravels.com"
+    email: "ankur.pata@gmail.com"
 
     create_user: reaction
     copy_local_key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub') }}"
@@ -156,7 +156,7 @@
         install_recommends: no
 
     - git:
-        repo: "https://github.com/reactioncommerce/reaction-development-platform.git"
+        repo: "https://github.com/ankurpata/custm-reaction-platform.git"
         dest: /home/{{ create_user }}/{{reaction_dir}}
         version: trunk
 
