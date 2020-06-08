@@ -8,7 +8,7 @@
   remote_user: root
   gather_facts: true
   vars:
-    do_auth_token: "3c2c54a4407304f27362d3ee31058b6132e875810e06b00aeb4c08f2cc941c81"
+    do_auth_token: "REPLACE_TOKEN1"
     domain: "taleoftravels.com"
     email: "ankur.pata@gmail.com"
 
