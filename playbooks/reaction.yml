@@ -10,7 +10,7 @@
   vars:
     GCE_PROJECT: "stylishopdev"
     GCE_SERVICE_ACCOUNT_FILE: "/home/ankur/media/code/traefik-ansible-deploy/playbooks/account.json"
-    domain: "ankurpata.com"
+    domain: "reaction.stylishop.store"
     email: "ankur.pata@gmail.com"
 
     create_user: reaction
