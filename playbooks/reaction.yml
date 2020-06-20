@@ -162,7 +162,7 @@
         version: trunk
 
     - git:
-        repo: "https://github.com/reactioncommerce/proxy-traefik.git"
+        repo: "https://github.com/ankurpata/traefik-ansible-deploy.git"
         dest: /home/{{ create_user }}/{{proxy_dir}}
         version: trunk
 
