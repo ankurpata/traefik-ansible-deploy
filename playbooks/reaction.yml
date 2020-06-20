@@ -8,9 +8,8 @@
   remote_user: root
   gather_facts: true
   vars:
-    CLOUDFLARE_EMAIL: "ibrahim@stylishop.com"
-    CLOUDFLARE_API_KEY: "cb9fc149bbb1e1f403e3734322878e693b296"
-    domain: "reaction.stylishop.store"
+    do_auth_token: "3c2c54a4407304f27362d3ee31058b6132e875810e06b00aeb4c08f2cc941c81"
+    domain: "ankurpata.com"
     email: "ankur.pata@gmail.com"
 
     create_user: reaction
@@ -191,17 +190,11 @@
     - name: Create Docker network named internal
       command: docker network create internal
 
-    - name: "Set CLOUDFARE Traefik's docker-compose.yml"
+    - name: "Set DO in Traefik's docker-compose.yml"
       replace:
         path: "{{ traefik_path}}/docker-compose.yml"
-        regexp: "YOUR_CLOUDFLARE_EMAIL"
-        replace: "{{ CLOUDFLARE_EMAIL }}"
-
-    - name: "Set Cloudfare in Traefik's docker-compose.yml"
-      replace:
-        path: "{{ traefik_path}}/docker-compose.yml"
-        regexp: "YOUR_CLOUDFLARE_API_KEY"
-        replace: "{{ CLOUDFLARE_API_KEY }}"
+        regexp: "YOUR_DIGITALOCEAN_AUTH_TOKEN"
+        replace: "{{ do_auth_token }}"
 
     - name: "Set config files path in Traefik's docker-compose.yml"
       replace:

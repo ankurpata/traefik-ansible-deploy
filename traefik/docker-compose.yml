@@ -16,8 +16,7 @@ services:
       - "80:80"
       - "443:443"
     environment:
-      - CLOUDFLARE_EMAIL=YOUR_CLOUDFLARE_EMAIL
-      - CLOUDFLARE_API_KEY=YOUR_CLOUDFLARE_API_KEY
+      - DO_AUTH_TOKEN=YOUR_DIGITALOCEAN_AUTH_TOKEN
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
