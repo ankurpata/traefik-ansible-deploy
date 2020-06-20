@@ -9,7 +9,7 @@
   gather_facts: true
   vars:
     GCE_PROJECT: "stylishopdev"
-    GCE_SERVICE_ACCOUNT_FILE: "./account.json"
+    GCE_SERVICE_ACCOUNT_FILE: "/home/ankur/media/code/traefik-ansible-deploy/playbooks/account.json"
     domain: "ankurpata.com"
     email: "ankur.pata@gmail.com"
 
