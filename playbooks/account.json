@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "stylishopdev",
+  "private_key_id": "3599c08d5547adf484b8a5f75270a30709c84572",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCqKZN1t4QnQX/h\nHDhiPXpT1vXsvciQxi9TjpvPa5S6UwBa4qnhz5d6vYDZ+vWdeLHYQY7jrf5/wwMs\nZmI0kpu9eT9AVgsIgq/MMYnwG+FlEwzV9cwnqLGSboYbpvAvz8RT+geI+iIs8PTo\ntR8QoAkT8vcTN/4NRw4N5rByk8xk9tZEazT50S6cOV6RlghDItL1ctqstqYu/cK0\nqp7rnmfq6vUPjc4SVG0d4kRYMZm3N/tT002bdz1cgBZEBbCPKklFP/T42i1Ysop2\nRrLtu3GQVViCbD226wniNVxEMFUEXCMR/Vtd1tQtSQpLF6eWqvUbUO16661T2T51\nr3h6Huq3AgMBAAECggEAAJ6HHVoOHpBz9S9Dm0PrAowZOAPWy4QVHwI5We9jyqvL\nqAkEIkC9peIzqldp9mk+iHFwoi57ax6cD9jNibBw5acfzk2h26WSGzWg8WFAmDwS\nA2NSG2DXSJejYE1iuWHRrpaN2XdDkZNM6N3j340di1eKg6TkBUtZZz6MLNaR21oz\nFqnk/dWSchZsjIAfb1GBkNI4am9umFPzao97QJ4uhpphfLw99GWwvOWCIMOu1iGF\n1Tb2bGxXbO/lfQAcenHYYmstBwgdZwd1rYdmcLmaYB/HflnXPjPnvRek+W1OtFxn\nI5VisMGclQxz8ykxV9qyeebCXuLb0aqk6h23lbgznQKBgQDfGK2xGLcDU8obczEK\n1y4t7/1djgD31paFquFGlb080/6quSrnnTjEhsr8yKe2fUF+XwC+h5hwB22DxoqK\nfpaiCjpU8rHZxy+OIt5nWfyieMwypAKb3+YPVjmy0Ifvo84jD9SmbalYZA4PdCn3\n2cxXjuTJhVknINlEF734XTgPcwKBgQDDQkyk6Iwu3k9zgGySrxrftKYSsFDAUE3A\ng7lx/WWTcB0IM0Fr8XbAHHY/N7mLaM5GfviD7gSIVlZGZCZf94q2gt+T/n26/ptz\ne5NDZHhlHuIcmvfA68qK6xoueUJIwIGoAZiUlbCb0LTPPuSO8wgfUjUbN1a7Td+w\nj7bJK58erQKBgQCHDi+H+EhCcWT2fSOBRoakNJaTHjYj0vpIbQv3aQqoWkXfID2C\n/UCyaE9V/DrbVLRjRivzK67ykuyPS4/vC3cxHTP23P0hs11slFtDAczYpnwnY/ZY\nWpCxVCeVwnuobOeLfjfjkJtl8Rw56r7FVkpH7y89d8Zi05XzjNPqGLSpVQKBgQCU\nBif6gHz9bvVGd55XmT3DR7z6wAWHtZksD/A/NT2TB1RLCihXf6dpvmn6RPF5eUuf\nb9RQl9mBzgn7tSLOb+gNsqtyE2UXpLsOUily1rDa4A3EZ8rYyygyJkcj4jNY2e+x\nAPy977kCdrcLwf8dS6rlq7ms10f+GOwyetC0M0iexQKBgQCjbGzEaV2FTDh5SeAR\nFub0COFISSLtYHm4tcgjGBZ+0XoD4LRgE1ezXLCMuNFBtzXfJI6jYXgdNRWl7/28\nnUsAcvyneaLvsxhnZKnfhe8P/AvL5Y1JeUCnsjft8ljJhtXUSU3P8IlbnafQ58y4\nL5WFQOV3vFdY3xJRmCUGnFbW8A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "acme-traefik@stylishopdev.iam.gserviceaccount.com",
+  "client_id": "111471611421987313145",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/acme-traefik%40stylishopdev.iam.gserviceaccount.com"
+}

@@ -8,8 +8,9 @@
   remote_user: root
   gather_facts: true
   vars:
-    do_auth_token: "REPLACE_TOKEN1"
-    domain: "taleoftravels.com"
+    GCE_PROJECT: "stylishopdev"
+    GCE_SERVICE_ACCOUNT_FILE: "./account.json"
+    domain: "ankurpata.com"
     email: "ankur.pata@gmail.com"
 
     create_user: reaction
@@ -203,11 +204,17 @@
     - name: Create Docker network named internal
       command: docker network create internal
 
-    - name: "Set DO Auth Token in Traefik's docker-compose.yml"
+    - name: "Set GCE PROJECT Traefik's docker-compose.yml"
       replace:
         path: "{{ traefik_path}}/docker-compose.yml"
-        regexp: "YOUR_DIGITALOCEAN_AUTH_TOKEN"
-        replace: "{{ do_auth_token }}"
+        regexp: "YOUR_GCE_PROJECT"
+        replace: "{{ GCE_PROJECT }}"
+
+    - name: "Set GCE_SERVICE_ACCOUNT_FILE in Traefik's docker-compose.yml"
+      replace:
+        path: "{{ traefik_path}}/docker-compose.yml"
+        regexp: "YOUR_GCE_SERVICE_ACCOUNT_FILE"
+        replace: "{{ GCE_SERVICE_ACCOUNT_FILE }}"
 
     - name: "Set config files path in Traefik's docker-compose.yml"
       replace:

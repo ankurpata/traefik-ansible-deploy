@@ -16,7 +16,8 @@ services:
       - "80:80"
       - "443:443"
     environment:
-      - DO_AUTH_TOKEN=YOUR_DIGITALOCEAN_AUTH_TOKEN
+      - GCE_PROJECT=YOUR_GCE_PROJECT
+      - GCE_SERVICE_ACCOUNT_FILE=YOUR_GCE_SERVICE_ACCOUNT_FILE
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
