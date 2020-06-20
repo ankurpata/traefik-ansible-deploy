@@ -16,8 +16,8 @@ services:
       - "80:80"
       - "443:443"
     environment:
-      - GCE_PROJECT=YOUR_GCE_PROJECT
-      - GCE_SERVICE_ACCOUNT_FILE=YOUR_GCE_SERVICE_ACCOUNT_FILE
+      - CLOUDFLARE_EMAIL=YOUR_CLOUDFLARE_EMAIL
+      - CLOUDFLARE_API_KEY=YOUR_CLOUDFLARE_API_KEY
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro

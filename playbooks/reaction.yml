@@ -8,8 +8,8 @@
   remote_user: root
   gather_facts: true
   vars:
-    GCE_PROJECT: "stylishopdev"
-    GCE_SERVICE_ACCOUNT_FILE: "/home/ankur/media/code/traefik-ansible-deploy/playbooks/account.json"
+    CLOUDFLARE_EMAIL: "ibrahim@stylishop.com"
+    CLOUDFLARE_API_KEY: "cb9fc149bbb1e1f403e3734322878e693b296"
     domain: "reaction.stylishop.store"
     email: "ankur.pata@gmail.com"
 
@@ -204,17 +204,17 @@
     - name: Create Docker network named internal
       command: docker network create internal
 
-    - name: "Set GCE PROJECT Traefik's docker-compose.yml"
+    - name: "Set CLOUDFARE Traefik's docker-compose.yml"
       replace:
         path: "{{ traefik_path}}/docker-compose.yml"
-        regexp: "YOUR_GCE_PROJECT"
-        replace: "{{ GCE_PROJECT }}"
+        regexp: "YOUR_CLOUDFLARE_EMAIL"
+        replace: "{{ CLOUDFLARE_EMAIL }}"
 
-    - name: "Set GCE_SERVICE_ACCOUNT_FILE in Traefik's docker-compose.yml"
+    - name: "Set Cloudfare in Traefik's docker-compose.yml"
       replace:
         path: "{{ traefik_path}}/docker-compose.yml"
-        regexp: "YOUR_GCE_SERVICE_ACCOUNT_FILE"
-        replace: "{{ GCE_SERVICE_ACCOUNT_FILE }}"
+        regexp: "YOUR_CLOUDFLARE_API_KEY"
+        replace: "{{ CLOUDFLARE_API_KEY }}"
 
     - name: "Set config files path in Traefik's docker-compose.yml"
       replace:
