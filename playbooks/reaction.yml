@@ -288,7 +288,7 @@
       lineinfile:
         path: "{{ reaction_platform_path }}/reaction/.env"
         regexp: "^ROOT_URL"
-        line: "ROOT_URL=https://api-reaction.stylishop.store"
+        line: "ROOT_URL=https://api.{{ domain }}"
 
     - name: "Set the example storefront's environment variables"
       lineinfile:
@@ -298,35 +298,35 @@
       loop:
         - {
             variable: "CANONICAL_URL",
-            value: "https://storefront-reaction.stylishop.store",
+            value: "https://storefront.{{ domain }}",
           }
         - {
             variable: "EXTERNAL_GRAPHQL_URL",
-            value: "https://api-reaction.stylishop.store/graphql",
+            value: "https://api.{{ domain }}/graphql",
           }
         - {
             variable: "OAUTH2_AUTH_URL",
-            value: "https://hydra-reaction.stylishop.store/oauth2/auth",
+            value: "https://hydra.{{ domain }}/oauth2/auth",
           }
         - {
             variable: "OAUTH2_IDP_HOST_URL",
-            value: "https://identity-reaction.stylishop.store",
+            value: "https://identity.{{ domain }}",
           }
         - {
             variable: "OAUTH2_REDIRECT_URL",
-            value: "https://storefront-reaction.stylishop.store/callback",
+            value: "https://storefront.{{ domain }}/callback",
           }
         - {
             variable: "OAUTH2_TOKEN_URL",
-            value: "https://hydra-reaction.stylishop.store/oauth2/token",
+            value: "https://hydra.{{ domain }}/oauth2/token",
           }
         - {
             variable: "OAUTH2_PUBLIC_LOGOUT_URL",
-            value: "https://hydra-reaction.stylishop.store/oauth2/sessions/logout",
+            value: "https://hydra.{{ domain }}/oauth2/sessions/logout",
           }
         - {
             variable: "OAUTH2_IDP_PUBLIC_CHANGE_PASSWORD_URL",
-            value: "https://identity-reaction.stylishop.store/account/change-password?email=EMAIL&from=FROM",
+            value: "https://identity.{{ domain }}/account/change-password?email=EMAIL&from=FROM",
           }
 
     - name: "Set Hydra's environment variables"
@@ -337,27 +337,27 @@
       loop:
         - {
             variable: "URLS_CONSENT",
-            value: "https://identity-reaction.stylishop.store/consent",
+            value: "https://identity.{{ domain }}/consent",
           }
         - {
             variable: "URLS_SELF_ISSUER",
-            value: "https://hydra-reaction.stylishop.store"
+            value: "https://hydra.{{ domain }}"
           }
         - {
             variable: "URLS_LOGIN",
-            value: "https://identity-reaction.stylishop.store/login",
+            value: "https://identity.{{ domain }}/login",
           }
         - {
             variable: "URLS_ERROR",
-            value: "https://identity-reaction.stylishop.store/account/oauth-error",
+            value: "https://identity.{{ domain }}/account/oauth-error",
           }
         - {
             variable: "URLS_LOGOUT",
-            value: "https://identity-reaction.stylishop.store/logout",
+            value: "https://identity.{{ domain }}/logout",
           }
         - {
             variable: "SERVE_PUBLIC_CORS_ALLOWED_ORIGINS",
-            value: "https://admin-reaction.stylishop.store",
+            value: "https://admin.{{ domain }}",
           }
 
     - name: "Set the Reaction identity service environment variables"
@@ -368,19 +368,19 @@
       loop:
         - {
             variable: "ROOT_URL",
-            value: "https://identity-reaction.stylishop.store",
+            value: "https://identity.{{ domain }}",
           }
         - {
             variable: "API_URL",
-            value: "https://api-reaction.stylishop.store/graphql",
+            value: "https://api.{{ domain }}/graphql",
           }
         - {
             variable: "HYDRA_TOKEN_URL",
-            value: "https://hydra-reaction.stylishop.store/oauth2/token"
+            value: "https://hydra.{{ domain }}/oauth2/token"
           }
         - {
             variable: "OAUTH2_CLIENT_DOMAINS",
-            value: "https://storefront-reaction.stylishop.store"
+            value: "https://storefront.{{ domain }}"
           }
 
     - name: "Set the Reaction admin UI service environment variables"
@@ -391,35 +391,35 @@
       loop:
         - {
             variable: "ROOT_URL",
-            value: "https://admin-reaction.stylishop.store",
+            value: "https://admin.{{ domain }}",
           }
         - {
             variable: "PUBLIC_STOREFRONT_HOME_URL",
-            value: "https://storefront-reaction.stylishop.store",
+            value: "https://storefront.{{ domain }}",
           }
         - {
             variable: "PUBLIC_I18N_BASE_URL",
-            value: "https://api-reaction.stylishop.store"
+            value: "https://api.{{ domain }}"
           }
         - {
             variable: "PUBLIC_FILES_BASE_URL",
-            value: "https://api-reaction.stylishop.store"
+            value: "https://api.{{ domain }}"
           }
         - {
             variable: "PUBLIC_GRAPHQL_API_URL_WS",
-            value: "wss://api-reaction.stylishop.store/graphql"
+            value: "wss://api.{{ domain }}/graphql"
           }
         - {
             variable: "PUBLIC_GRAPHQL_API_URL_HTTP",
-            value: "https://api-reaction.stylishop.store/graphql"
+            value: "https://api.{{ domain }}/graphql"
           }
         - {
             variable: "OAUTH2_PUBLIC_URL",
-            value: "https://hydra-reaction.stylishop.store"
+            value: "https://hydra.{{ domain }}"
           }
         - {
             variable: "OAUTH2_IDP_PUBLIC_CHANGE_PASSWORD_URL",
-            value: "https://identity-reaction.stylishop.store/account/change-password?email=EMAIL&from=FROM"
+            value: "https://identity.{{ domain }}/account/change-password?email=EMAIL&from=FROM"
           }
 
     - name: "Remove all Reaction Platform containers"
