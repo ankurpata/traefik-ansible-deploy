@@ -290,6 +290,11 @@
         path: "{{ traefik_path}}/traefik.yml"
         mode: "600"
 
+    - name: Copy acme.json cert file from media certs
+      copy:
+        src: /home/ankur/media/certs/acme.json
+        dest: {{ traefik_path}}/acme.json
+
     - name: "Set correct permissions on acme.json"
       file:
         path: "{{ traefik_path}}/acme.json"
