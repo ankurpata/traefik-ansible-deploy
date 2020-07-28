@@ -22,6 +22,7 @@
     reaction_dir: reaction-development-platform
     plugins: plugins
     reaction_platform_path: "/home/{{create_user}}/{{reaction_dir}}"
+    acme_json_path: "/home/ankur/media/certs/acme.json"
     traefik_admin_user: reaction
     traefik_path: "/home/{{ create_user }}/{{ proxy_dir }}/traefik"
 
@@ -292,7 +293,7 @@
 
     - name: Copy acme.json cert file from media certs
       copy:
-        src: /home/ankur/media/certs/acme.json
+        src: {{ acme_json_path }}
         dest: {{ traefik_path}}/acme.json
 
     - name: "Set correct permissions on acme.json"
