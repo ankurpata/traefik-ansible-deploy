@@ -24,11 +24,38 @@
     acme_json_path: "/home/ankur/media/certs/acme.json"
     traefik_admin_user: reaction
     traefik_path: "/home/{{ create_user }}/{{ proxy_dir }}/traefik"
-    git_ssh_public_key: "Your public ssh key"
+    git_ssh_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkyLVyw162OCzvrz2KcjxZHnGQq9LYE0fARrrpjWbqOvleyjLGzZga2Qw2nqAKHXkI54K/f+NO854Tj4Yh660SH2lUSJNiOaN1/77UlGQ3U3jl+YMHiSoxZoI
+                         aljYASEUS/iTszOfSM+oauyWj
+                         gZ75wQVhwLwN0pZMrtAV+ijunT6Y+uRUu/kD89ixfBFZvHeNBVFxnPyxV4VKiKQOfB/DojS/z3Xq5Q41EVNQPfbJWYmhJhnJk65QqMA34Wp4KDaVuGXICpRJItV0rvwr/3MMTw0pMrRyLVes4k2ywpQCYA/UQhGjn6B1CCpKbaOq9K3Bir+nA9v/
+                         lUxXQsk0jgm/ root@reaction-dev"
     git_ssh_key: |
-        -----BEGIN RSA PRIVATE KEY-----
-        .... actual key here ....
-        -----END RSA PRIVATE KEY-----
+      -----BEGIN OPENSSH PRIVATE KEY-----
+      b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFwAAAAdzc2gtcn
+      NhAAAAAwEAAQAAAQEApMi1csNetjgs7689inI8WR5xkKvS2BNHwEa66Y1m6jr5Xsoyxs2Y
+      GtkMNp6gCh15COeCv3/jTvOeE4+GIeutEh9pVEiTYjmjdf++1JRkN1N45fmDB4kqMWaCGp
+      Y2AEhFEv4k7Mzn0jPqGrslo4Ge+cEFYcC8DdKWTK7QFfoo7p0+mPrkVLv5A/PYsXwRWbx3
+      jQVRcZz8sVeFSoikDnwfw6I0v8916uUONRFTUD32yVmJoSYZyZOuUKjAN+FqeCg2lbhlyA
+      qUSSLVdK78K/9zDE8NKTK0ci1XrOJNssKUAmAP1EIRo5+gdQgqSm2jqvStwYq/pwPb/5VM
+      V0LJNI4JvwAAA8inTvYop072KAAAAAdzc2gtcnNhAAABAQCkyLVyw162OCzvrz2KcjxZHn
+      GQq9LYE0fARrrpjWbqOvleyjLGzZga2Qw2nqAKHXkI54K/f+NO854Tj4Yh660SH2lUSJNi
+      OaN1/77UlGQ3U3jl+YMHiSoxZoIaljYASEUS/iTszOfSM+oauyWjgZ75wQVhwLwN0pZMrt
+      AV+ijunT6Y+uRUu/kD89ixfBFZvHeNBVFxnPyxV4VKiKQOfB/DojS/z3Xq5Q41EVNQPfbJ
+      WYmhJhnJk65QqMA34Wp4KDaVuGXICpRJItV0rvwr/3MMTw0pMrRyLVes4k2ywpQCYA/UQh
+      Gjn6B1CCpKbaOq9K3Bir+nA9v/lUxXQsk0jgm/AAAAAwEAAQAAAQEAi5ezjnrO2xKPjqQn
+      QAcx9FUD44iLXpxGpi3E3WD6E+bNpW0owp0cA3JnFEYgUTFSfSaR7mQKTbG28d8dw9KAlN
+      +jPNEWeZlWTfnO0Qq8Mto1iqxqQZIC+kJaaOdi665NRZ+h7DBRGhL8eJSdd/uwjubjBkJd
+      jGAfDurwQA3havDSN9vXfeDSmrwwaay2sZ27qjjocsWZIt0qFiOFKcSsTBrWYyLtIc180U
+      dk42MipmtbwpqF15KN7Zf4hYDhe1HHwMRE18uiubE2ep+KQYetLpx/xpXulQimcGTKyj5E
+      7FhJs0sRxfUuqzWvnXhoBuwsOHokr84VZ9czkmvt+8E/EQAAAIABrfvfCIdfU7kH11vc/C
+      +lkRdaZPjmdlsNq9uQGbChc3xIbs+h1zZunWXy302QKrubyVrJDSoYnCuALvwDm/UOgxr/
+      h2iV0pNu4rigRnjQr2u+qPCDGU9E/azUTMQQndS6FePs9fp/ytr2PTOLD/cXfyZ9iXxf4S
+      CA1vhfJbGBzwAAAIEA0DgKiJzMkYIDAjx72JLsn2USBoRunJvBiEt2xRb2V8qcTHiV3tIV
+      jdWDa1Nx31/YAGo2RIzlm2t5S8nupqO++3fp4AGKPGPqasoFikMtU1mcm6PkQEKfYtewd1
+      dRaUaXvCZo0mAwLUe+WnVomO9vVYBaTlvC+FwVQfv6U6FhG9sAAACBAMqZDlCpjmcTgDhA
+      D19Jgea+7yO7xKlJzQD0tw26FbZWFFQh4yYjvsm0dmOEBdKNQFfbfOTqFXUVbWZnpvs3sR
+      qkdeFXuL5+79Y+qQRFRiU9QNxRhAeW6WD6JHpjZ7oqAqOLqt9wjiqRhe2DXa3bxSXqrHxH
+      IwWkMsBqGKPfOcDtAAAAEXJvb3RAcmVhY3Rpb24tZGV2AQ==
+      -----END OPENSSH PRIVATE KEY-----
 
   tasks:
     - name: Make sure we have a 'wheel' group
