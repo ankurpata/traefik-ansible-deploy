@@ -160,12 +160,9 @@
         dest: /home/{{ create_user }}/{{plugins}}/reaction-api-plugin
         version: trunk
 
-    - name: "Install Plugin"
-      become: yes
-      become_user: "{{ create_user }}"
-      command: yarn install
-      args:
-        chdir: "/home/{{create_user}}/{{plugins}}/reaction-api-plugin"
+    - name: Install packages based on package.json.
+      yarn:
+        path: /home/{{create_user}}/{{plugins}}/reaction-api-plugin
 
     - git:
         repo: "git@github.com:ankurstyli/api-plugin-products.git"
