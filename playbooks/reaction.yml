@@ -157,7 +157,7 @@
 
     - git:
         repo: "git@github.com:stylidev/reaction-api-plugin.git"
-        dest: /home/{{ create_user }}/{{plugins}}/
+        dest: /home/{{ create_user }}/{{plugins}}/reaction-api-plugin
         version: trunk
 
     - name: "Install Plugin"
@@ -169,7 +169,7 @@
 
     - git:
         repo: "git@github.com:ankurstyli/api-plugin-products.git"
-        dest: /home/{{ create_user }}/{{plugins}}/
+        dest: /home/{{ create_user }}/{{plugins}}/api-plugin-products
         version: trunk
 
     - name: Install packages based on package.json.
@@ -178,7 +178,7 @@
 
     - git:
         repo: "git@github.com:ankurstyli/api-plugin-catalogs.git"
-        dest: /home/{{ create_user }}/{{plugins}}/
+        dest: /home/{{ create_user }}/{{plugins}}/api-plugin-catalogs
         version: trunk
 
     - name: Install packages based on package.json.
@@ -187,7 +187,7 @@
 
     - git:
         repo: "git@github.com:ankurstyli/api-plugin-pricing-simple.git"
-        dest: /home/{{ create_user }}/{{plugins}}/
+        dest: /home/{{ create_user }}/{{plugins}}/api-plugin-pricing-simple
         version: trunk
 
     - name: Install packages based on package.json.
@@ -196,7 +196,7 @@
 
     - git:
         repo: "https://github.com/amitlandmark/api-plugin-shops.git"
-        dest: /home/{{ create_user }}/{{plugins}}/
+        dest: /home/{{ create_user }}/{{plugins}}/api-plugin-shops
         version: trunk
 
     - name: Install packages based on package.json.
@@ -205,7 +205,7 @@
 
     - git:
         repo: "https://github.com/umeshkm960/api-plugin-tags.git"
-        dest: /home/{{ create_user }}/{{plugins}}/
+        dest: /home/{{ create_user }}/{{plugins}}/api-plugin-tags
         version: trunk
 
     - name: Install packages based on package.json.
