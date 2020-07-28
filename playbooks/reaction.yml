@@ -146,7 +146,7 @@
         install_recommends: no
 
     - git:
-        repo: "https://github.com/ankurpata/custm-reaction-platform.git"
+        repo: "git@github.com:stylidev/reaction-dev-platform.git "
         dest: /home/{{ create_user }}/{{reaction_dir}}
         version: trunk
 
