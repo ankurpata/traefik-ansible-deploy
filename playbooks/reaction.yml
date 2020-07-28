@@ -11,7 +11,6 @@
     do_auth_token: "3c2c54a4407304f27362d3ee31058b6132e875810e06b00aeb4c08f2cc941c81"
     domain: "ankurpata.com"
     email: "ankur.pata@gmail.com"
-
     create_user: reaction
     copy_local_key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub') }}"
     docker_compose_version: "1.25.4"
@@ -25,6 +24,11 @@
     acme_json_path: "/home/ankur/media/certs/acme.json"
     traefik_admin_user: reaction
     traefik_path: "/home/{{ create_user }}/{{ proxy_dir }}/traefik"
+    git_ssh_public_key: "Your public ssh key"
+    git_ssh_key: |
+        -----BEGIN RSA PRIVATE KEY-----
+        .... actual key here ....
+        -----END RSA PRIVATE KEY-----
 
   tasks:
     - name: Make sure we have a 'wheel' group
