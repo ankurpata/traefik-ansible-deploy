@@ -293,7 +293,7 @@
 
     - name: Copy acme.json cert file from media certs
       copy:
-        src: {{ acme_json_path }}
+        src: "{{ acme_json_path }}"
         dest: "{{ traefik_path}}/acme.json"
 
     - name: "Set correct permissions on acme.json"
