@@ -18,7 +18,9 @@
     nodejs_version: "12.x"
     proxy_dir: proxy
     proxy_path: "/home/{{ create_user }}/{{ proxy_dir }}"
+    dev_api_plugin_path: "/home/{{create_user}}/plugins"
     reaction_dir: reaction-development-platform
+    plugins: plugins
     reaction_platform_path: "/home/{{create_user}}/{{reaction_dir}}"
     traefik_admin_user: reaction
     traefik_path: "/home/{{ create_user }}/{{ proxy_dir }}/traefik"
@@ -151,6 +153,69 @@
         repo: "https://github.com/ankurpata/traefik-ansible-deploy.git"
         dest: /home/{{ create_user }}/{{proxy_dir}}
         version: gcp_dev
+
+    - git:
+        repo: "git@github.com:stylidev/reaction-api-plugin.git"
+        dest: /home/{{ create_user }}/{{plugins}}/
+        version: trunk
+
+    - name: "Install Plugin"
+      become: yes
+      become_user: "{{ create_user }}"
+      command: yarn install
+      args:
+        chdir: "/home/{{create_user}}/{{plugins}}/reaction-api-plugin"
+
+    - git:
+        repo: "git@github.com:ankurstyli/api-plugin-products.git"
+        dest: /home/{{ create_user }}/{{plugins}}/
+        version: trunk
+
+    - name: Install packages based on package.json.
+      yarn:
+        path: /home/{{create_user}}/{{plugins}}/api-plugin-products
+
+    - git:
+        repo: "git@github.com:ankurstyli/api-plugin-catalogs.git"
+        dest: /home/{{ create_user }}/{{plugins}}/
+        version: trunk
+
+    - name: Install packages based on package.json.
+      yarn:
+        path: /home/{{create_user}}/{{plugins}}/api-plugin-catalogs
+
+    - git:
+        repo: "git@github.com:ankurstyli/api-plugin-pricing-simple.git"
+        dest: /home/{{ create_user }}/{{plugins}}/
+        version: trunk
+
+    - name: Install packages based on package.json.
+      yarn:
+        path: /home/{{create_user}}/{{plugins}}/api-plugin-pricing-simple
+
+    - git:
+        repo: "https://github.com/amitlandmark/api-plugin-shops.git"
+        dest: /home/{{ create_user }}/{{plugins}}/
+        version: trunk
+
+    - name: Install packages based on package.json.
+      yarn:
+        path: /home/{{create_user}}/{{plugins}}/api-plugin-shops
+
+    - git:
+        repo: "https://github.com/umeshkm960/api-plugin-tags.git"
+        dest: /home/{{ create_user }}/{{plugins}}/
+        version: trunk
+
+    - name: Install packages based on package.json.
+      yarn:
+        path: /home/{{create_user}}/{{plugins}}/api-plugin-tags
+
+    - name: "Replace plugins path in docker-compose-dev for Reaction"
+      replace:
+        path: "/home/{{create_user}}/{{reaction_dir}}/reaction/docker-compose-dev.yml"
+        regexp: "DEV_API_PLUGIN"
+        replace: "{{ dev_api_plugin_path }}"
 
     - name: Change owner of the Reaction Platform and proxy to the newly created user
       command: "chown -R {{create_user}}:{{create_user}} {{reaction_dir}} {{proxy_dir}}"
