@@ -175,7 +175,7 @@
     - name: "Build the Reaction Platform"
       become: yes
       become_user: "{{ create_user }}"
-      command: make
+      command: make init-dev
       args:
         chdir: "/home/{{create_user}}/{{reaction_dir}}"
 
