@@ -243,7 +243,7 @@
 
     - name: "Replace plugins path in docker-compose-dev for Reaction"
       replace:
-        path: "/home/{{create_user}}/{{reaction_dir}}/reaction/docker-compose-dev.yml"
+        path: "/home/{{create_user}}/{{reaction_dir}}/reaction/docker-compose.dev.yml"
         regexp: "DEV_API_PLUGIN"
         replace: "{{ dev_api_plugin_path }}"
 
