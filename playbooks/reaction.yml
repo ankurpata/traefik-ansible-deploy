@@ -209,12 +209,6 @@
       yarn:
         path: /home/{{create_user}}/{{plugins}}/api-plugin-tags
 
-    - name: "Replace plugins path in docker-compose-dev for Reaction"
-      replace:
-        path: "/home/{{create_user}}/{{reaction_dir}}/reaction/docker-compose-dev.yml"
-        regexp: "DEV_API_PLUGIN"
-        replace: "{{ dev_api_plugin_path }}"
-
     - name: Change owner of the Reaction Platform and proxy to the newly created user
       command: "chown -R {{create_user}}:{{create_user}} {{reaction_dir}} {{proxy_dir}}"
       args:
@@ -246,6 +240,12 @@
       command: make stop
       args:
         chdir: "{{ reaction_platform_path }}"
+
+    - name: "Replace plugins path in docker-compose-dev for Reaction"
+      replace:
+        path: "/home/{{create_user}}/{{reaction_dir}}/reaction/docker-compose-dev.yml"
+        regexp: "DEV_API_PLUGIN"
+        replace: "{{ dev_api_plugin_path }}"
 
     - name: Create Docker network named web
       command: docker network create web
